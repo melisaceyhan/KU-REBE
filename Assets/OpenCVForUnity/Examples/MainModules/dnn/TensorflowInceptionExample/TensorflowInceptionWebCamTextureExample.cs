@@ -26,9 +26,14 @@ namespace OpenCVForUnityExample
     public class TensorflowInceptionWebCamTextureExample : MonoBehaviour
     {
         public Text FinalResult;
-        public string TargetNames;
-        public UnityEvent Order;
-        public UnityEvent NonOrder;
+        public string Targets1;
+        public string Targets2;
+        public string Targets3;
+        public string Targets4;
+        public UnityEvent FirstOrder;
+        public UnityEvent SecondOrder;
+        public UnityEvent ThirdOrder;
+        public UnityEvent FourthOrder;
 
         /// <summary>
         /// The texture.
@@ -252,19 +257,33 @@ namespace OpenCVForUnityExample
 
                     FinalResult.text = "This is " + classes[(int)minmax.maxLoc.x];
 
-                    if (TargetNames.Contains(classes[(int)minmax.maxLoc.x]))
+                    if (Targets1.Contains(classes[(int)minmax.maxLoc.x]))
                     {
-                        if (Order != null)
+                        if (FirstOrder != null)
                         {
-                            Order.Invoke();
+                            FirstOrder.Invoke();
                         }
                     }
-                    if (!TargetNames.Contains(classes[(int)minmax.maxLoc.x]))
+                   if (Targets2.Contains(classes[(int)minmax.maxLoc.x]))
                     {
-                        if (NonOrder != null)
+                        if (SecondOrder != null)
                         {
-                            NonOrder.Invoke();
-                        } 
+                            SecondOrder.Invoke();
+                        }
+                    }
+                    if (Targets3.Contains(classes[(int)minmax.maxLoc.x]))
+                    {
+                        if (ThirdOrder != null)
+                        {
+                            ThirdOrder.Invoke();
+                        }
+                    }
+                    if (Targets4.Contains(classes[(int)minmax.maxLoc.x]))
+                    {
+                        if (FourthOrder != null)
+                        {
+                            FourthOrder.Invoke();
+                        }
                     }
 
                     //Imgproc.putText (rgbaMat, "Best match class " + classes [(int)minmax.maxLoc.x], new Point (5, rgbaMat.rows () - 10), Core.FONT_HERSHEY_SIMPLEX, 1.0, new Scalar (255, 255, 255, 255), 2, Imgproc.LINE_AA, false);

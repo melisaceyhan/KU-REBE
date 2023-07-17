@@ -2214,8 +2214,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalResult: {fileID: 545414308}
-  TargetNames: lotion, sunglasses, perfume
-  Order:
+  Targets1: lotion, sunglasses, perfume
+  Targets2: 
+  Targets3: 
+  Targets4: 
+  FirstOrder:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 662205422}
@@ -2230,7 +2233,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  NonOrder:
+  SecondOrder:
+    m_PersistentCalls:
+      m_Calls: []
+  ThirdOrder:
+    m_PersistentCalls:
+      m_Calls: []
+  FourthOrder:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1709852088
