@@ -254,7 +254,6 @@ namespace OpenCVForUnityExample
 
                     if (TargetNames.Contains(classes[(int)minmax.maxLoc.x]))
                     {
-                        FinalResult.text = "We found it !!!";
                         if (Order != null)
                         {
                             Order.Invoke();
