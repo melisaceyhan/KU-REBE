@@ -2214,16 +2214,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalResult: {fileID: 545414308}
-  Targets1: lotion, sunglasses, perfume
-  Targets2: 
-  Targets3: 
-  Targets4: 
+  Targets1: lotion, perfume
+  Targets2: sunglasses
+  Targets3: comic book
+  Targets4: mouse
   FirstOrder:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 662205422}
         m_TargetAssemblyTypeName: ScoreManagerScript, Assembly-CSharp
-        m_MethodName: IncreaseScore
+        m_MethodName: IncreaseScore1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2235,13 +2235,49 @@ MonoBehaviour:
         m_CallState: 2
   SecondOrder:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 662205422}
+        m_TargetAssemblyTypeName: ScoreManagerScript, Assembly-CSharp
+        m_MethodName: IncreaseScore2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ThirdOrder:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 662205422}
+        m_TargetAssemblyTypeName: ScoreManagerScript, Assembly-CSharp
+        m_MethodName: IncreaseScore3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   FourthOrder:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 662205422}
+        m_TargetAssemblyTypeName: ScoreManagerScript, Assembly-CSharp
+        m_MethodName: IncreaseScore4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1709852088
 MonoBehaviour:
   m_ObjectHideFlags: 0
