@@ -26,10 +26,18 @@ namespace OpenCVForUnityExample
     public class TensorflowInceptionWebCamTextureExample : MonoBehaviour
     {
         public Text FinalResult;
-        public string Targets1;
-        public string Targets2;
-        public string Targets3;
-        public string Targets4;
+        public string Object1;
+        public string Object2;
+        public string Object3;
+        public string Object4;
+        public string Object5;
+
+        public bool FirstObjectFound = false;
+        public bool SecondObjectFound = false;
+        public bool ThirdObjectFound = false;
+        public bool FourthObjectFound = false;
+        public bool FifthObjectFound = false;
+
         public UnityEvent FirstOrder;
         public UnityEvent SecondOrder;
         public UnityEvent ThirdOrder;
@@ -255,35 +263,65 @@ namespace OpenCVForUnityExample
                     prob.Dispose();
                     blob.Dispose();
 
-                    FinalResult.text = "This is " + classes[(int)minmax.maxLoc.x];
 
-                    if (Targets1.Contains(classes[(int)minmax.maxLoc.x]))
+                    if (Object1 == (classes[(int)minmax.maxLoc.x]) & FirstObjectFound == false)
                     {
                         if (FirstOrder != null)
                         {
                             FirstOrder.Invoke();
                         }
+
+                        FirstObjectFound = true;
+
+                        FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
-                   if (Targets2.Contains(classes[(int)minmax.maxLoc.x]))
+
+                    if (Object2 == (classes[(int)minmax.maxLoc.x]) & SecondObjectFound == false)
+                    {
+                        if (FirstOrder != null)
+                        {
+                            FirstOrder.Invoke();
+                        }
+
+                        SecondObjectFound = true;
+
+                        FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
+                    }
+
+                   if (Object3 == (classes[(int)minmax.maxLoc.x]) & ThirdObjectFound == false)
                     {
                         if (SecondOrder != null)
                         {
                             SecondOrder.Invoke();
                         }
+
+                        ThirdObjectFound = true;
+
+                        FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
-                    if (Targets3.Contains(classes[(int)minmax.maxLoc.x]))
+
+                    if (Object4 == (classes[(int)minmax.maxLoc.x]) & FourthObjectFound == false)
                     {
                         if (ThirdOrder != null)
                         {
                             ThirdOrder.Invoke();
                         }
+
+                        FourthObjectFound = true;
+
+                        FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
-                    if (Targets4.Contains(classes[(int)minmax.maxLoc.x]))
+
+                    if (Object5 == (classes[(int)minmax.maxLoc.x]) & FifthObjectFound == false)
                     {
                         if (FourthOrder != null)
                         {
                             FourthOrder.Invoke();
                         }
+
+                        FifthObjectFound = true;
+
+                        FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
                     //Imgproc.putText (rgbaMat, "Best match class " + classes [(int)minmax.maxLoc.x], new Point (5, rgbaMat.rows () - 10), Core.FONT_HERSHEY_SIMPLEX, 1.0, new Scalar (255, 255, 255, 255), 2, Imgproc.LINE_AA, false);
@@ -300,6 +338,18 @@ namespace OpenCVForUnityExample
         /// <summary>
         /// Raises the destroy event.
         /// </summary>
+
+        [ContextMenu("ResetObjectStates")]
+        void UpdateObjectStates()
+        {
+            FirstObjectFound = false;
+            SecondObjectFound = false;
+            ThirdObjectFound = false;
+            FourthObjectFound = false;
+            FifthObjectFound = false;
+        }
+
+
         void OnDestroy()
         {
             webCamTextureToMatHelper.Dispose();
