@@ -788,11 +788,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalResult: {fileID: 545414308}
-  Object1: perfume
+  Object1: hair spray
   Object2: lotion
   Object3: sunglasses
   Object4: comic book
-  Object5: mouse
+  Object5: pencil sharpener
   FirstObjectFound: 0
   SecondObjectFound: 0
   ThirdObjectFound: 0

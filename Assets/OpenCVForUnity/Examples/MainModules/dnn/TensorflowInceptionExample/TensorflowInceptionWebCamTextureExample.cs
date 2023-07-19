@@ -14,6 +14,7 @@ using OpenCVForUnity.ImgprocModule;
 using OpenCVForUnity.UnityUtils;
 using OpenCVForUnity.UnityUtils.Helper;
 using UnityEngine.Events;
+using Random = System.Random;
 
 namespace OpenCVForUnityExample
 {
@@ -32,6 +33,11 @@ namespace OpenCVForUnityExample
         public string Object4;
         public string Object5;
 
+        string[] class1 = {"hair spray", "perfume", "lotion"};
+        string[] class2 = {"sunglasses", "wig"};
+        string[] class3 = {"comic book", "cartoon"};
+        string[] class4 = {"mouse", "pencil sharpener"};
+
         public bool FirstObjectFound = false;
         public bool SecondObjectFound = false;
         public bool ThirdObjectFound = false;
@@ -42,6 +48,28 @@ namespace OpenCVForUnityExample
         public UnityEvent SecondOrder;
         public UnityEvent ThirdOrder;
         public UnityEvent FourthOrder;
+
+
+        [ContextMenu("RandomObjectSelection")]
+        void RandomObjectSelection()
+        {
+            Random random = new Random();
+
+            var randomIndex1 = random.Next(0, class1.Length);
+            Object1 = class1[randomIndex1];
+
+            var randomIndex2 = random.Next(0, class1.Length);
+            Object2 = class1[randomIndex2];
+
+            var randomIndex3 = random.Next(0, class2.Length);
+            Object3 = class2[randomIndex3];
+
+            var randomIndex4 = random.Next(0, class3.Length);
+            Object4 = class3[randomIndex4];
+
+            var randomIndex5 = random.Next(0, class4.Length);
+            Object5 = class4[randomIndex5];
+        }
 
         /// <summary>
         /// The texture.
