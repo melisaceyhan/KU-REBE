@@ -40,13 +40,6 @@ namespace OpenCVForUnityExample
         string[] class3 = {"electric locomotive", "steam locomotive", "pool table", "alp", "volcano", "dummy", "hare", "hamster", "revolver", "schooner", "accordion", "starfish", "grand piano", "airliner", "warplane", "fireboat", "canoe", "yawl", "container ship", "katamaran", "trimaran", "liner", "aircraft carrier", "pirate", "bobsled", "amphibian", "convertible", "Model T", "racer", "sports car", "go-cart", "golfcart", "snowplow", "pickup", "snowmobile", "recreational vehicle", "mobile home", "tricycle", "unicycle", "horse cart", "four-poster", "throne", "maraca", "marimba", "French horn", "oscilloscope", "trombone", "harmonica", "panpipe", "bassoon", "oboe", "sax", "ocarina", "promontory", "sandbar", "coral reef", "geyser", "hatchet", "cleaver", "corkscrew", "chain saw", "ostrich", "brambling", "goldfinch", "house finch", "junco", "indigo bunting", "robin", "jay", "magpie", "chickadee", "water ouzel", "hand blower", "oxygen mask", "snorkel", "oil filter", "sundial", "parking meter", "projector", "bow", "cannon[ground]", "rifle", "projectile", "crane", "slide rule", "hand-held computer", "harvester", "thresher", "slot", "vending machine", "sewing machine", "hook", "paddlewheel", "gas pump", "reel", "radiator", "puck", "solar dish", "muzzle", "ski", "tripod", "maypole", "mousetrap", "spider web", "espresso maker", "rotisserie", "waffle iron", "Crock Pot", "wok", "vestment", "megalith", "bannister", "breakwater", "dam", "tile roof", "Petri dish", "football helmet", "bathing cap", "holster", "chainlink fence", "picket fence", "worm fence", "stone wall", "grille", "sliding door", "turnstile", "mountain tent", "scoreboard", "honeycomb", "plate rack", "pedestal", "beacon", "barn", "greenhouse", "palace", "monastery", "library", "apiary", "boathouse", "church", "mosque", "stupa", "planetarium", "restaurant", "cinema", "home theater", "lumbermill", "coil", "obelisk", "totem pole", "castle", "prison", "grocery store", "bakery", "barbershop", "bookshop", "butcher shop", "confectionery", "shoe shop", "tobacco shop", "toyshop", "fountain", "cliff dwelling", "yurt", "dock", "feather boa", "cloak", "shield", "scabbard", "hen-of-the-woods", "mortar", "bulletproof vest", "consommé", "crutch", "cuirass", "military uniform", "cowboy hat", "trolley bus", "bullet train", "carpenter's kit", "ladle", "academic gown", "dome", "crate", "theater curtain", "window shade", "cowboy boot", "window screen", "lab coat", "fire screen", "minibus", "sombrero", "pickelhaube", "rain barrel", "cassette player", "bell cote", "Windsor tie", "overskirt", "sarong", "bolo tie", "breastplate", "stretcher", "jersey", "reflex camera", "tape player", "scuba diver", "thatch", "beaker", "carbonara"};
         string[] class4 = {"trilobite", "harvestman kit fox", "English setter", "Siberian husky", "Australian terrier", "English springer", "grey whale", "lesser panda", "Egyptian cat", "ibex", "Persian cat", "cougar", "gazelle", "porcupine", "sea lion", "malamute", "badger", "Great Dane", "Walker hound", "Welsh springer spaniel", "whippet", "Scottish deerhound", "killer whale", "mink", "African elephant", "Weimaraner", "soft-coated wheaten terrier", "Dandie Dinmont", "red wolf", "Old English sheepdog", "jaguar", "otterhound", "bloodhound", "Airedale", "hyena", "meerkat", "giant schnauzer", "titi", "three-toed sloth", "sorrel", "black-footed ferret", "dalmatian", "black-and-tan coonhound", "papillon", "skunk", "Staffordshire bullterrier", "Mexican hairless", "Bouvier des Flandres", "weasel", "miniature poodle", "Cardigan", "malinois", "bighorn", "fox squirrel", "colobus", "tiger cat", "Lhasa", "impala", "coyote", "Yorkshire terrier", "Newfoundland", "brown bear", "red fox", "Norwegian elkhound", "Rottweiler", "hartebeest", "Saluki", "grey fox", "schipperke", "Pekinese", "Brabancon griffon", "West Highland white terrier", "Sealyham terrier", "guenon", "mongoose", "indri", "tiger", "Irish wolfhound", "wild boar", "EntleBucher", "zebra", "ram", "French bulldog", "orangutan", "basenji", "leopard", "Bernese mountain dog", "Maltese dog", "Norfolk terrier", "toy terrier", "vizsla", "cairn", "squirrel monkey", "groenendael", "clumber", "Siamese cat", "chimpanzee", "komondor", "Afghan hound", "Japanese spaniel", "proboscis monkey", "guinea pig", "white wolf", "ice bear", "gorilla", "borzoi", "toy poodle", "Kerry blue terrier", "ox", "Scotch terrier", "Tibetan mastiff", "spider monkey", "Doberman", "Boston bull", "Greater Swiss Mountain dog", "Appenzeller", "Shih-Tzu", "Irish water spaniel", "Pomeranian", "Bedlington terrier", "warthog", "Arabian camel", "siamang", "miniature schnauzer", "collie", "golden retriever", "Irish terrier", "affenpinscher", "Border collie", "boxer", "silky terrier", "beagle", "Leonberg", "German short-haired pointer", "patas", "dhole", "baboon", "macaque", "Chesapeake Bay retriever", "bull mastiff", "kuvasz", "capuchin", "pug", "curly-coated retriever", "Norwich terrier", "flat-coated retriever", "hog", "keeshond", "Eskimo dog", "Brittany spaniel", "standard poodle", "Lakeland terrier", "snow leopard", "Gordon setter", "dingo", "standard schnauzer", "Tibetan terrier", "Arctic fox", "wire-haired fox terrier", "basset", "water buffalo", "American black bear", "Angora", "bison", "howler monkey", "hippopotamus", "chow", "giant panda", "American Staffordshire terrier", "Shetland sheepdog", "Great Pyrenees", "Chihuahua", "tabby", "marmoset", "Labrador retriever", "Saint Bernard", "armadillo", "Samoyed", "bluetick", "redbone", "polecat", "marmot", "kelpie", "gibbon", "llama", "miniature pinscher", "pole", "maze", "horizontal bar", "wood rabbit", "Italian greyhound", "lion", "cocker spaniel", "Irish setter", "dugong", "Indian elephant", "beaver", "Sussex spaniel", "Pembroke", "Blenheim spaniel", "Madagascar cat", "Rhodesian ridgeback", "lynx", "African hunting dog", "langur", "Ibizan hound", "timber wolf", "cheetah", "English foxhound", "briard", "sloth bear", "Border terrier", "German shepherd", "otter", "koala", "tusker", "echidna", "wallaby", "platypus", "wombat", "chambered nautilus", "space shuttle", "airship", "submarine", "wreck", "tank", "half track", "missile", "beach vagon", "jinrikisha", "oxcart", "bald eagle", "vulture", "great grey owl", "black grouse", "ptarmigan", "ruffed grouse", "prairie chicken", "peacock", "quail", "partridge", "African grey", "macaw", "sulphur-crested cockatoo", "lorikeet", "coucal", "bee eater", "hornbill", "hummingbird", "jacamar", "toucan", "drake", "red-breasted merganser", "goose", "black swan", "white stork", "black stork", "spoonbill", "flamingo", "American egret", "little blue heron", "bittern", "crane", "limpkin", "American coot", "bustard", "ruddy turnstone", "red-backed sandpiper", "redshank", "dowitcher", "oystercatcher", "European gallinule", "pelican", "king penguin", "albatross", "great white shark", "tiger shark", "hammerhead", "electric ray", "stingray", "barracouta", "coho", "tench", "eel", "rock beauty", "anemone fish", "lionfish", "puffer", "sturgeon", "gar", "loggerhead", "leatherback turtle", "guillotine", "radio telescope", "assault rifle", "potter's wheel", "jack-o'-lantern", "pier", "shoji", "drilling platform", "groom", "bearskin", "polaroid camera", "racket", "coral fungus", "earthstar", "stinkhorn", "chain mail", "gyromitre", "Water tower", "altar", "triumphal arch", "patio", "steel arch bridge", "suspension bridge", "viaduct", "mud turtle", "terrapin", "box turtle", "banded gecko", "common iguana", "American chameleon", "whiptail", "agama", "frilled lizard", "alligator lizard", "Gila monster", "green lizard", "African chameleon", "Komodo dragon", "triceratops", "African crocodile", "American alligator", "thunder snake", "ringneck snake", "hognose snake", "green snake", "king snake", "garter snake", "water snake", "vine snake", "night snake", "boa constrictor", "rock python", "Indian cobra", "green mamba", "sea snake", "horned viper", "diamondback", "sidewinder", "European fire salamander", "common newt", "eft", "spotted salamander", "axolotl", "bullfrog", "tree frog", "tailed frog", "whistle", "wing", "scorpion", "black and gold garden spider", "barn spider", "garden spider", "black widow", "tarantula", "wolf spider", "tick", "centipede", "isopod", "Dungeness crab", "rock crab", "fiddler crab", "king crab", "American lobster", "spiny lobster", "crayfish", "hermit crab", "tiger beetle", "ladybug", "ground beetle", "long-horned beetle", "leaf beetle", "dung beetle", "rhinoceros beetle", "weevil", "fly", "bee", "grasshopper", "cricket", "walking stick", "cockroach", "mantis", "cicada", "leafhopper", "lacewing", "dragonfly", "damselfly", "admiral", "ringlet", "monarch", "cabbage butterfly", "sulphur butterflyi lycaenid", "jellyfish", "sea anemone", "brain coral", "flatworm", "nematode", "conch", "snail", "slug", "sea slug", "chiton", "sea urchin", "sea cucumber"};
 
-        public bool FirstObjectFound = false;
-        public bool SecondObjectFound = false;
-        public bool ThirdObjectFound = false;
-        public bool FourthObjectFound = false;
-        public bool FifthObjectFound = false;
-        public bool SixthObjectFound = false;
-        public bool SeventhObjectFound = false;
 
         public UnityEvent FirstOrder;
         public UnityEvent SecondOrder;
@@ -96,8 +89,6 @@ namespace OpenCVForUnityExample
 
 
         public NavigationScript navigationScript;
-        
-        public GameObject returnMenuButton;
 
 
         /// <summary>
@@ -321,89 +312,91 @@ namespace OpenCVForUnityExample
                     blob.Dispose();
 
 
-                    if (Object1 == (classes[(int)minmax.maxLoc.x]) && FirstObjectFound == false && navigationScript.CanSearchObject1 == true)
+                    if (Object1 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("FirstObjectFound") == 0 && navigationScript.CanSearchObject1 == true)
                     {
                         if (FirstOrder != null)
                         {
                             FirstOrder.Invoke();
                         }
 
-                        FirstObjectFound = true;
+                        PlayerPrefs.SetInt("FirstObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
-                    if (Object2 == (classes[(int)minmax.maxLoc.x]) && SecondObjectFound == false && navigationScript.CanSearchObject2 == true)
+                    if (Object2 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("SecondObjectFound") == 0 && navigationScript.CanSearchObject2 == true)
                     {
                         if (FirstOrder != null)
                         {
                             FirstOrder.Invoke();
                         }
 
-                        SecondObjectFound = true;
+                        PlayerPrefs.SetInt("SecondObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
-                   if (Object3 == (classes[(int)minmax.maxLoc.x]) && ThirdObjectFound == false && navigationScript.CanSearchObject3 == true)
+                   if (Object3 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("ThirdObjectFound") == 0 && navigationScript.CanSearchObject3 == true)
                     {
                         if (FirstOrder != null)
                         {
                             FirstOrder.Invoke();
                         }
 
-                        ThirdObjectFound = true;
+                        PlayerPrefs.SetInt("ThirdObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
-                    if (Object4 == (classes[(int)minmax.maxLoc.x]) && FourthObjectFound == false && navigationScript.CanSearchObject4 == true)
+                    if (Object4 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("FourthObjectFound") == 0 && navigationScript.CanSearchObject4 == true)
                     {
                         if (SecondOrder != null)
                         {
                             SecondOrder.Invoke();
                         }
 
-                        FourthObjectFound = true;
+                        PlayerPrefs.SetInt("FourthObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
-                    if (Object5 == (classes[(int)minmax.maxLoc.x]) && FifthObjectFound == false && navigationScript.CanSearchObject5 == true)
+                    if (Object5 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("FifthObjectFound") == 0 && navigationScript.CanSearchObject5 == true)
                     {
                         if (SecondOrder != null)
                         {
                             SecondOrder.Invoke();
                         }
 
-                        FifthObjectFound = true;
+                        PlayerPrefs.SetInt("FifthObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
-                    if (Object6 == (classes[(int)minmax.maxLoc.x]) && SixthObjectFound == false && navigationScript.CanSearchObject6 == true)
+                    if (Object6 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("SixthObjectFound") == 0 && navigationScript.CanSearchObject6 == true)
                     {
                         if (ThirdOrder != null)
                         {
                             ThirdOrder.Invoke();
                         }
 
-                        SixthObjectFound = true;
+                        PlayerPrefs.SetInt("SixthObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
 
-                    if (Object7 == (classes[(int)minmax.maxLoc.x]) && SeventhObjectFound == false && navigationScript.CanSearchObject7 == true)
+                    if (Object7 == (classes[(int)minmax.maxLoc.x]) && PlayerPrefs.GetInt("SeventhObjectFound") == 0 && navigationScript.CanSearchObject7 == true)
                     {
                         if (FourthOrder != null)
                         {
                             FourthOrder.Invoke();
                         }
 
-                        SeventhObjectFound = true;
+                        PlayerPrefs.SetInt("SeventhObjectFound", 1);
 
                         FinalResult.text = "You have found the " + classes[(int)minmax.maxLoc.x] + "!";
                     }
+
+                    PlayerPrefs.Save();
 
                     //Imgproc.putText (rgbaMat, "Best match class " + classes [(int)minmax.maxLoc.x], new Point (5, rgbaMat.rows () - 10), Core.FONT_HERSHEY_SIMPLEX, 1.0, new Scalar (255, 255, 255, 255), 2, Imgproc.LINE_AA, false);
                     if (fpsMonitor != null)
@@ -422,15 +415,15 @@ namespace OpenCVForUnityExample
         /// </summary>
 
         [ContextMenu("ResetObjectStates")]
-        public void UpdateObjectStates()
+        public void ResetObjectStates()
         {
-            FirstObjectFound = false;
-            SecondObjectFound = false;
-            ThirdObjectFound = false;
-            FourthObjectFound = false;
-            FifthObjectFound = false;
-            SixthObjectFound = false;
-            SeventhObjectFound = false;
+            PlayerPrefs.SetInt("FirstObjectFound", 0);
+            PlayerPrefs.SetInt("SecondObjectFound", 0);
+            PlayerPrefs.SetInt("ThirdObjectFound", 0);
+            PlayerPrefs.SetInt("FourthObjectFound", 0);
+            PlayerPrefs.SetInt("FifthObjectFound", 0);
+            PlayerPrefs.SetInt("SixthObjectFound", 0);
+            PlayerPrefs.SetInt("SeventhObjectFound", 0);
         }
 
 
