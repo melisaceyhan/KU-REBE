@@ -320,7 +320,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: chimpanzee
+  m_Text: African chameleon
 --- !u!222 &130318130
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ice lolly
+  m_Text: torch
 --- !u!1 &192748037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: stage
+  m_Text: shower curtain
 --- !u!1 &662205421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: lighter
+  m_Text: sock
 --- !u!1 &780540680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,7 +1854,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: hairspray
+  m_Text: lighter
 --- !u!1 &803523894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: abaya
+  m_Text: sleeping bag
 --- !u!1 &1076744432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,7 +2014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Windsor tie
+  m_Text: sombrero
 --- !u!1 &1087074977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,20 +2725,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalResult: {fileID: 545414308}
-  Object1: hair slide
-  Object2: Granny Smith
-  Object3: diaper
-  Object4: crib
-  Object5: bathtub
-  Object6: home theater
-  Object7: hornbill
-  FirstObjectFound: 0
-  SecondObjectFound: 0
-  ThirdObjectFound: 0
-  FourthObjectFound: 0
-  FifthObjectFound: 0
-  SixthObjectFound: 0
-  SeventhObjectFound: 0
+  Object1: torch
+  Object2: sock
+  Object3: lighter
+  Object4: shower curtain
+  Object5: sleeping bag
+  Object6: sombrero
+  Object7: African chameleon
   FirstOrder:
     m_PersistentCalls:
       m_Calls:
@@ -2800,7 +2793,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   navigationScript: {fileID: 579152352}
-  returnMenuButton: {fileID: 1087074977}
 --- !u!114 &1709852088
 MonoBehaviour:
   m_ObjectHideFlags: 0
