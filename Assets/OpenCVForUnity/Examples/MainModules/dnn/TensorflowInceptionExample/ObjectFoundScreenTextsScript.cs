@@ -11,7 +11,7 @@ public class ObjectFoundScreenTextsScript : MonoBehaviour
     [ContextMenu("PrintRecentScore")]
     public void PrintRecentScore()
     {
-        recentScoreText.text = "Your recent score:\n" + scoreManagerScript.PlayerScore.ToString();
+        recentScoreText.text = "Your current score:\n" + scoreManagerScript.PlayerScore.ToString();
     }
 
 }
