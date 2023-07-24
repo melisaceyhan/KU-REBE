@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e6cc3554f9f894a9ec1739707b2320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: MainMenu
+  sceneName: Object detection
 --- !u!1 &565701848
 GameObject:
   m_ObjectHideFlags: 0
