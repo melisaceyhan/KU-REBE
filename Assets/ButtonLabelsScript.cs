@@ -18,13 +18,13 @@ public class ButtonLabelsScript : MonoBehaviour
     [ContextMenu("RenewButtonNames")]
     public void RenewButtonLabels()
     {
-        button1.text = tensorflowInceptionWebCamTextureExample.Object1;
-        button2.text = tensorflowInceptionWebCamTextureExample.Object2;
-        button3.text = tensorflowInceptionWebCamTextureExample.Object3;
-        button4.text = tensorflowInceptionWebCamTextureExample.Object4;
-        button5.text = tensorflowInceptionWebCamTextureExample.Object5;
-        button6.text = tensorflowInceptionWebCamTextureExample.Object6;
-        button7.text = tensorflowInceptionWebCamTextureExample.Object7;
+        button1.text = "30 points:\n" + tensorflowInceptionWebCamTextureExample.Object1;
+        button2.text = "30 points:\n" + tensorflowInceptionWebCamTextureExample.Object2;
+        button3.text = "30 points:\n" + tensorflowInceptionWebCamTextureExample.Object3;
+        button4.text = "50 points:\n" + tensorflowInceptionWebCamTextureExample.Object4;
+        button5.text = "50 points:\n" + tensorflowInceptionWebCamTextureExample.Object5;
+        button6.text = "100 points:\n" + tensorflowInceptionWebCamTextureExample.Object6;
+        button7.text = "200 points:\n" + tensorflowInceptionWebCamTextureExample.Object7;
     }
 
     void Start()

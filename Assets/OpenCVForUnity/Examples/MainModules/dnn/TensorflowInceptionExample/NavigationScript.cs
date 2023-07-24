@@ -12,17 +12,29 @@ public class NavigationScript : MonoBehaviour
 
     public GameObject MissionsMenu;
     public GameObject returnMenuButton;
+    public GameObject Frame;
+    public GameObject Score;
+    public GameObject YourScore;
+    public GameObject objectFoundScreen;
 
     public void DeactivateBackground()
     {
         MissionsMenu.SetActive(false);
         returnMenuButton.SetActive(true);
+        Frame.SetActive(true);
+        Score.SetActive(false);
+        YourScore.SetActive(false);
     }
 
     public void ActivateBackground()
     {
         MissionsMenu.SetActive(true);
         returnMenuButton.SetActive(false);
+        Frame.SetActive(false);
+        Score.SetActive(true);
+        YourScore.SetActive(true);
+        objectFoundScreen.SetActive(false);
+
     }
 
     public void SearchingObject1()
