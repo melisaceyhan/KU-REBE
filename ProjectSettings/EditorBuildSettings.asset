@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MissionsScene.unity
     guid: 4f2136703e3874644b9c3811ce5b89cb
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 181b18995d5766d46851056a56bd66c0
-  - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: bf0e784d331509e46887b31eecf133bb
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 181b18995d5766d46851056a56bd66c0
   - enabled: 1
     path: Assets/Scenes/Object detection.unity
     guid: c4f034254f913b24e810fdc6da75f8cd

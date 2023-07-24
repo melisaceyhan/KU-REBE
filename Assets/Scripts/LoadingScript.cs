@@ -11,30 +11,45 @@ public class LoadingScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public string sceneName;
+    private bool coroutineNotInLoop;
     void Start()
     {
 
-        this.GetComponent<TextMeshProUGUI>().text = "Loading..";
+        this.GetComponent<TextMeshProUGUI>().text = "Loading.";
+        StartCoroutine(WaitAndPrint());
+        StartCoroutine(ChangeScene());
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        // this.GetComponent<TextMeshProUGUI>().text += ".";
-        WaitAndPrint(Time.deltaTime);
-    }
-    private IEnumerator WaitAndPrint(float waitTime)
+
+
+    private IEnumerator WaitAndPrint()
     {
 
-        GetComponent<TextMeshProUGUI>().text = "Loading.";
-        yield return new WaitForSeconds(0.2f);
+        while (coroutineNotInLoop == false)
+        {
+            GetComponent<TextMeshProUGUI>().text = "Loading..";
+            yield return new WaitForSeconds(1);
 
-        GetComponent<TextMeshProUGUI>().text = "Loading..";
-        yield return new WaitForSeconds(0.2f);
+            GetComponent<TextMeshProUGUI>().text = "Loading...";
+            yield return new WaitForSeconds(1);
 
+            GetComponent<TextMeshProUGUI>().text = "Loading.";
+            yield return new WaitForSeconds(1);
+        }
 
     }
+
+    private IEnumerator ChangeScene()
+    {
+
+        yield return new WaitForSeconds(6);
+        coroutineNotInLoop = true;
+        SceneManager.LoadScene(sceneName);
+
+    }
+
 }
 
 
