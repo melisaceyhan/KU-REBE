@@ -18,4 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Object detection.unity
     guid: c4f034254f913b24e810fdc6da75f8cd
   m_configObjects:
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: d057ae6e25d81f441bdb746f61c928ad, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c0544dabdf4f84646980732e138dceb7, type: 2}
