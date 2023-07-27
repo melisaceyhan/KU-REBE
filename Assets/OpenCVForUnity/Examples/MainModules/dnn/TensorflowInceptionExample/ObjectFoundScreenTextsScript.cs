@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class ObjectFoundScreenTextsScript : MonoBehaviour
 {
     public Text recentScoreText;
-    public ScoreManagerScript scoreManagerScript;
 
     [ContextMenu("PrintRecentScore")]
     public void PrintRecentScore()
     {
-        recentScoreText.text = "Your current score:\n" + scoreManagerScript.PlayerScore.ToString();
+        recentScoreText.text = "Your current score:\n" + ScoreManagerScript.PlayerScore.ToString();
     }
 
 }

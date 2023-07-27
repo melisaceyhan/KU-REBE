@@ -16,6 +16,7 @@ public class NavigationScript : MonoBehaviour
     public GameObject Score;
     public GameObject YourScore;
     public GameObject objectFoundScreen;
+    public GameObject returnMainMenuButton;
 
     public void DeactivateBackground()
     {
@@ -24,6 +25,8 @@ public class NavigationScript : MonoBehaviour
         Frame.SetActive(true);
         Score.SetActive(false);
         YourScore.SetActive(false);
+        returnMainMenuButton.SetActive(false);
+
     }
 
     public void ActivateBackground()
@@ -34,6 +37,7 @@ public class NavigationScript : MonoBehaviour
         Score.SetActive(true);
         YourScore.SetActive(true);
         objectFoundScreen.SetActive(false);
+        returnMainMenuButton.SetActive(true);
 
     }
 
@@ -81,6 +85,13 @@ public class NavigationScript : MonoBehaviour
         CanSearchObject5 = false;
         CanSearchObject6 = false;
         CanSearchObject7 = false;
+    }
+
+    public void ReturnMainMenu()
+    {
+
+        SceneManager.LoadScene("MainMenu");
+
     }
 
 }
