@@ -14,7 +14,7 @@ public class ScoreAdderScript : MonoBehaviour
     public void SendScore()
     {
 
-        HighScores.UploadScore("ozan", ScoreManagerScript.PlayerScore);
+        HighScores.UploadScore("ozan", 100);
     }
 
 }
