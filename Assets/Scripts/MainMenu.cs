@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene(sceneName);
     }
 
+    public void leaderboardScene()
+    {
+        SceneManager.LoadScene("Leaderboard");
+    }
+
     public void QuitApp() 
     {
         Application.Quit();
