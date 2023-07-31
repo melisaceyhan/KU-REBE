@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using CodeMonkey.Utils;
 public class UI_Assistant : MonoBehaviour
 {
-    [SerializeField] private TextWriter textWriter;
+    
     private Text messageText;
     private TextWriter.TextWriterSingle textWriterSingle;
     private AudioSource talkingAudioSource;
