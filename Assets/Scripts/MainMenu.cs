@@ -2,11 +2,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
-    public void GoToScene(string sceneName) {
+    public void GoToScene(string sceneName) 
+    {
         SceneManager.LoadScene(sceneName);
     }
 
-    public void QuitApp() {
+    public void leaderboardScene()
+    {
+        SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void QuitApp() 
+    {
         Application.Quit();
         Debug.Log("Application has quit.");
     }
