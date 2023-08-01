@@ -13,6 +13,7 @@ public class Register : MonoBehaviour
     public InputField passwordInput;
     public Button registerButton;
     public Button goToLoginButton;
+    public static string username;
 
     ArrayList credentials;
 
@@ -31,6 +32,11 @@ public class Register : MonoBehaviour
             File.WriteAllText(Application.dataPath + "/credentials.txt", "");
         }
 
+    }
+
+    public void recordUsername()
+    {
+        username = usernameInput.text;
     }
 
     void goToLoginScene()
