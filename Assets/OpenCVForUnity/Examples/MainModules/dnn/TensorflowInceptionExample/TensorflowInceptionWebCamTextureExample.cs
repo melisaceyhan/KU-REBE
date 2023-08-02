@@ -106,6 +106,19 @@ namespace OpenCVForUnityExample
 
         public NavigationScript navigationScript;
         public ObjectFoundScreenTextsScript objectFoundScreenTextsScript;
+        public Rigidbody trail;
+
+
+        public IEnumerator ScanAnimation()
+        {
+            trail.velocity = new Vector3(0, -2560, 0);
+            yield return new WaitForSeconds(1);
+            trail.velocity = new Vector3(0, 2560, 0);
+            yield return new WaitForSeconds(1);
+            trail.velocity = new Vector3(0, 0, 0);
+            objectFoundScreen.SetActive(true);
+
+        }
 
 
         /// <summary>
@@ -345,7 +358,7 @@ namespace OpenCVForUnityExample
                             FirstOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 
@@ -362,7 +375,7 @@ namespace OpenCVForUnityExample
                             FirstOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 
@@ -379,7 +392,7 @@ namespace OpenCVForUnityExample
                             FirstOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 
@@ -396,7 +409,7 @@ namespace OpenCVForUnityExample
                             SecondOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 
@@ -413,7 +426,7 @@ namespace OpenCVForUnityExample
                             SecondOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 
@@ -430,7 +443,7 @@ namespace OpenCVForUnityExample
                             ThirdOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 
@@ -447,7 +460,7 @@ namespace OpenCVForUnityExample
                             FourthOrder.Invoke();
                         }
 
-                        objectFoundScreen.SetActive(true);
+                        StartCoroutine(ScanAnimation());
                         ObjectText.text = "You have found the:\n" + classes[(int)minmax.maxLoc.x];
                         objectFoundScreenTextsScript.PrintRecentScore();
 

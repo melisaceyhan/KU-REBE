@@ -29,7 +29,7 @@ public class ScoreAdderScript : MonoBehaviour
     public void SendScore()
     {
 
-        HighScores.UploadScore(Register.username, ScoreDisplay);
+        HighScores.UploadScore(PlayerPrefs.GetString("username"), ScoreDisplay);
     }
 
 }

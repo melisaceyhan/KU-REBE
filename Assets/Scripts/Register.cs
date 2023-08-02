@@ -10,66 +10,87 @@ public class Register : MonoBehaviour
 {
 
     public InputField usernameInput;
-    public InputField passwordInput;
     public Button registerButton;
-    public Button goToLoginButton;
-    public static string username;
+    public static string usernameDisplay;
 
-    ArrayList credentials;
+    const string privateCode = "zZxJO9tQ2U-bSZuPSSWmdA7kVLP3zxuECJcUampGfFxw";
+    const string publicCode = "64c0f5fe8f40bb8380ddf717";
+    const string webURL = "http://dreamlo.com/lb/";
 
-    // Start is called before the first frame update
+    List<string> usernameList = new List<string>();
+
+
+    IEnumerator DatabaseUpload()
+    {
+        WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(usernameDisplay) + "/" + 0);
+        yield return www;
+    }
+
+    public void DownloadUsername()
+    {
+        StartCoroutine(DownloadUsernamesFromDatabse());
+    }
+
+    IEnumerator DownloadUsernamesFromDatabse()
+    {
+        WWW www = new WWW(webURL + publicCode + "/pipe/");
+        yield return www;
+
+        if (string.IsNullOrEmpty(www.error))
+        {
+            FormatHighScores(www.text);
+        }
+        else 
+        {
+            print("Error uploading" + www.error);
+        }
+    }
+
+
+    void FormatHighScores(string textStream)
+    {
+        string[] entries = textStream.Split(new char[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
+
+        for (int i = 0; i < entries.Length; i ++)
+        {
+            string[] entryInfo = entries[i].Split("|");
+            string username = entryInfo[0];
+            usernameList.Add(username);    
+        }
+    }
+
+
     void Start()
     {
-        registerButton.onClick.AddListener(writeStuffToFile);
-        goToLoginButton.onClick.AddListener(goToLoginScene);
+        DownloadUsername();
+    }
 
-        if (File.Exists(Application.dataPath + "/credentials.txt"))
+
+    public void RegisterUser()
+    {
+        if (usernameList.Contains(usernameInput.text))
         {
-            credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+            Debug.Log("The username is already taken!");
         }
+
+        else if (usernameInput.text == "")
+        {
+            Debug.Log("Enter a username");
+        }
+
         else
         {
-            File.WriteAllText(Application.dataPath + "/credentials.txt", "");
+            usernameDisplay = usernameInput.text;
+            PlayerPrefs.SetString("username", usernameDisplay);
+            Debug.Log("Successfully registered!");
+            GoToMainMenu();
+            StartCoroutine(DatabaseUpload());
         }
-
     }
 
-    public void recordUsername()
+    public void GoToMainMenu()
     {
-        username = usernameInput.text;
+        SceneManager.LoadScene("MainMenu");
     }
-
-    void goToLoginScene()
-    {
-        SceneManager.LoadScene("Login");
-    }
-
-
-    void writeStuffToFile()
-    {
-        bool isExists = false;
-
-        credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
-        foreach (var i in credentials)
-        {
-            if (i.ToString().Contains(usernameInput.text))
-            {
-                isExists = true;
-                break;
-            }
-        }
-
-        if (isExists)
-        {
-            Debug.Log($"Username '{usernameInput.text}' already exists");
-        }
-        else
-        {
-            credentials.Add(usernameInput.text + ":" + passwordInput.text);
-            File.WriteAllLines(Application.dataPath + "/credentials.txt", (String[])credentials.ToArray(typeof(string)));
-            Debug.Log("Account Registered");
-        }
-    }
-
 
 }
