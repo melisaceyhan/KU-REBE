@@ -107,6 +107,7 @@ namespace OpenCVForUnityExample
         public NavigationScript navigationScript;
         public ObjectFoundScreenTextsScript objectFoundScreenTextsScript;
         public Rigidbody trail;
+        public AudioSource audioSource;
 
 
         public IEnumerator ScanAnimation()
@@ -116,8 +117,8 @@ namespace OpenCVForUnityExample
             trail.velocity = new Vector3(0, 2560, 0);
             yield return new WaitForSeconds(1);
             trail.velocity = new Vector3(0, 0, 0);
+            audioSource.Play();
             objectFoundScreen.SetActive(true);
-
         }
 
 
