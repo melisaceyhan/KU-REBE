@@ -53,6 +53,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
+            yield return new WaitForSeconds(0.05f);
             dialogueText.text += letter;
             yield return null;
         }
