@@ -179,17 +179,15 @@ MonoBehaviour:
   dialogue:
     name: Captain
     sentences:
-    - Once, in the not-so-distant future of the year 2068, the world stood on the
+    - 'Once, in the not-so-distant future of the year 2068, the world stood on the
       precipice of collapse. Longer lifespans were a blessing from the development
       of ground-breaking tissue engineering, but an unanticipated plague of overpopulation
-      also arrived with it. The unified governments responded to the situation with
-      extreme measures, including bombing random places in a vain attempt to slow
-      population increase. The world descended into anarchy, and the foundations
-      of civilization started to fall apart..
-    - How are you? I don't like speaking that much but its gonna be a long story
-      my friend.
-    - 'So here it begins. Once upon a time there was a post apocalyptic era of the
-      world. '
+      also arrived with it. '
+    - The unified governments responded to the situation with extreme measures, including
+      bombing random places in a vain attempt to slow population increase. The world
+      descended into anarchy, and the foundations of civilization started to fall
+      apart..
+    - 
 --- !u!114 &109171905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,8 +809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 142.75}
-  m_SizeDelta: {x: 160, y: 246.9}
+  m_AnchoredPosition: {x: 0, y: 51.605713}
+  m_SizeDelta: {x: 160, y: 201.4857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200576681
 MonoBehaviour:
@@ -827,7 +825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -836,7 +834,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a66519cc344bed04f85c0ad345c67ac2, type: 3}
-    m_FontSize: 30
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1072,7 +1070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1984353665
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class Register : MonoBehaviour
     const string publicCode = "64c0f5fe8f40bb8380ddf717";
     const string webURL = "http://dreamlo.com/lb/";
 
+    public GameObject alreadytaken;
+    public GameObject bos_isim;
     List<string> usernameList = new List<string>();
 
 
@@ -71,11 +73,15 @@ public class Register : MonoBehaviour
         if (usernameList.Contains(usernameInput.text))
         {
             Debug.Log("The username is already taken!");
+            alreadytaken.SetActive(true);  
+            
+          
         }
 
         else if (usernameInput.text == "")
         {
             Debug.Log("Enter a username");
+            bos_isim.SetActive(true);   
         }
 
         else
