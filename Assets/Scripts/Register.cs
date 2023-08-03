@@ -19,6 +19,8 @@ public class Register : MonoBehaviour
 
     public GameObject alreadytaken;
     public GameObject bos_isim;
+    public GameObject usernameTooLong;
+
     List<string> usernameList = new List<string>();
 
 
@@ -82,6 +84,11 @@ public class Register : MonoBehaviour
         {
             Debug.Log("Enter a username");
             bos_isim.SetActive(true);   
+        }
+
+        else if (usernameInput.text.Length > 13)
+        {
+            usernameTooLong.SetActive(true);
         }
 
         else

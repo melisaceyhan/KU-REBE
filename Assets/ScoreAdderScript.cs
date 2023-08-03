@@ -8,6 +8,7 @@ public class ScoreAdderScript : MonoBehaviour
 {
         public TMP_Text scoreText;
         private int ScoreDisplay = 0;
+        public TMP_Text usernameText;
 
     void Start()
     {
@@ -24,6 +25,8 @@ public class ScoreAdderScript : MonoBehaviour
         scoreText.text = ScoreDisplay.ToString();
 
         SendScore();
+
+        usernameText.text = PlayerPrefs.GetString("username");
     }
 
     public void SendScore()
