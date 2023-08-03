@@ -20,9 +20,15 @@ public class Register : MonoBehaviour
     public GameObject alreadytaken;
     public GameObject bos_isim;
     public GameObject usernameTooLong;
+    public RawImage background;
 
     List<string> usernameList = new List<string>();
 
+    IEnumerator ChangeBackground()
+    {
+        yield return new WaitForSeconds(1);
+        background.color = new Color(255, 255, 255, 255);
+    }
 
     IEnumerator DatabaseUpload()
     {
@@ -66,6 +72,7 @@ public class Register : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(ChangeBackground());
         DownloadUsername();
     }
 
@@ -95,10 +102,17 @@ public class Register : MonoBehaviour
         {
             usernameDisplay = usernameInput.text;
             PlayerPrefs.SetString("username", usernameDisplay);
+            PlayerPrefs.SetInt("RegisterComplete", 1);
             Debug.Log("Successfully registered!");
             GoToMainMenu();
             StartCoroutine(DatabaseUpload());
         }
+    }
+
+    [ContextMenu("ChangeState")]
+    public void ChangeState()
+    {
+        PlayerPrefs.SetInt("RegisterComplete", 0);
     }
 
     public void GoToMainMenu()

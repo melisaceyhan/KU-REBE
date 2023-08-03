@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
 
-    public Text nameText;
     public Text dialogueText;
-
-    //public Animator animator;
-
     private Queue<string> sentences;
+    private int texts= 0;
 
-    // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
@@ -21,10 +18,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        //animator.SetBool("IsOpen", true);
-
-        nameText.text = dialogue.name;
-
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -37,15 +30,21 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        texts += 1;
+
+        if (texts == 3)
+        {
+            StartCoroutine(GoToRegister());
+        }
+    }
+
+    IEnumerator GoToRegister()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Register");
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -53,15 +52,10 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
             dialogueText.text += letter;
             yield return null;
         }
-    }
-
-    void EndDialogue()
-    {
-        //animator.SetBool("IsOpen", false);
     }
 
 }
