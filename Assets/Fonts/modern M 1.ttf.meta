@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 973e1912daa40394abdec7d1529ca085
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Modern M
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a66519cc344bed04f85c0ad345c67ac2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
