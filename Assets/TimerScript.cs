@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.iOS;
 
 public class DailyFunctionScheduler : MonoBehaviour
 {
 
     public OpenCVForUnityExample.TensorflowInceptionWebCamTextureExample tensorflowInceptionWebCamTextureExample;
     // The target time for the function to be executed daily
-    private int targetHour = 15;    // 8 o'clock in the morning
+    private int targetHour = 17;    // 8 o'clock in the morning
     private int targetMinute = 0;  // 0 minutes (you can adjust this if needed)
     private int targetSecond = 0;  // 0 seconds (you can adjust this if needed)
 
