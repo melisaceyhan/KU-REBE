@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
         texts += 1;
 
-        if (texts == 3)
+        if (texts == 18)
         {
             StartCoroutine(GoToRegister());
         }
