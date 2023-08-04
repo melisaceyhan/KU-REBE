@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class DailyFunctionScheduler : MonoBehaviour
 {
@@ -36,13 +37,13 @@ public class DailyFunctionScheduler : MonoBehaviour
             float initialDelay = (float)timeToTarget.TotalSeconds;
 
             // Schedule the function to repeat daily at the target time
-            ScheduleLocalNotification("Your daily challanges are renewed!", initialDelay, 86400);
+            //ScheduleLocalNotification("Your daily challanges are renewed!", initialDelay, 86400);
 
             hasScheduled = true;
         }
     }
 
-    private void ScheduleLocalNotification(string message, float delay, float repeatInterval)
+    /*private void ScheduleLocalNotification(string message, float delay, float repeatInterval)
     {
         // Check if the platform supports local notifications
 #if UNITY_IOS || UNITY_ANDROID
@@ -58,6 +59,7 @@ public class DailyFunctionScheduler : MonoBehaviour
         #endif
 #endif
     }
+    */
 
     // Your custom function that you want to execute daily at the specified time
     private void ExecuteDailyTask()
